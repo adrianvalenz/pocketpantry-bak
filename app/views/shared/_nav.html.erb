@@ -1,0 +1,13 @@
+<header>
+  <section class="max-w-5xl mx-auto px-4 py-8 flex justify-between items-center">
+    <div>
+      <%= link_to root_path do %>
+        <%= render partial: 'shared/icons/logotype', locals: { text_styles: "fill-rose-600", pocket_styles: "fill-rose-400" } %>
+      <% end %>
+    </div>
+
+    <div>
+      <%= render 'shared/session_portal' %>
+    </div>
+  </section>
+</header>
