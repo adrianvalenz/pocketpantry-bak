@@ -7,9 +7,9 @@ module.exports = {
   ],
   theme: {
     fontFamily: {
-      "serif": ['mrs-eaves', 'serif'],
-      "sans": ['mr-eaves-sans', 'sans-serif'],
-      "smallcaps": ['mrs-eaves-roman-all-petite-c', 'serif'],
+      "sans": ['proxima-nova', 'sans-serif'],
+      "display": ['modern-love', 'sans-serif'],
+      "displaycaps": ['mordern-love-caps', 'sans-serif'],
     },
     extend: {
       colors: {
