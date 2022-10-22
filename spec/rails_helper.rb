@@ -5,6 +5,8 @@ require_relative '../config/environment'
 # Prevent database truncation if the environment is production
 abort("The Rails environment is running in production mode!") if Rails.env.production?
 require 'rspec/rails'
+require 'capybara/rails'
+require 'capybara/rspec'
 # Add additional requires below this line. Rails is not loaded until this point!
 require_relative 'support/factory_bot'
 require_relative 'support/chrome'
@@ -33,6 +35,11 @@ end
 RSpec.configure do |config|
   # Remove this line if you're not using ActiveRecord or ActiveRecord fixtures
   config.fixture_path = "#{::Rails.root}/spec/fixtures"
+
+  config.include Warden::Test::Helpers
+  config.after :each do
+    Warden.test_reset!
+  end
 
   # If you're not using ActiveRecord, or you'd prefer not to run each of your
   # examples within a transaction, remove the following line or assign false
@@ -69,3 +76,5 @@ Shoulda::Matchers.configure do |config|
     with.library :rails
   end
 end
+
+Capybara.default_driver = :selenium # :selenium_chrome and :selenium_chrome_headless are also registered
