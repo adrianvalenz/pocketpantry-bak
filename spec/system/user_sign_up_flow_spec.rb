@@ -4,14 +4,6 @@ RSpec.describe "Devise User", :type => :system do
 
   it "registers and logs in successfully" do
     user = FactoryBot.create(:user, email: "adrian@example.com", password: "secret")
-
-    visit new_user_registration_path
-
-    fill_in "Email", with: user.email
-    fill_in "Password", with: user.password
-    fill_in "Password confirmation", with: user.password
-    click_button "Sign up"
-
     user.confirm
 
     visit new_user_session_path
