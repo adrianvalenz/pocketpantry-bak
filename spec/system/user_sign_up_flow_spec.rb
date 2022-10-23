@@ -2,7 +2,7 @@ require 'rails_helper'
 
 RSpec.describe "Devise User", :type => :system do
 
-  it "registers and logs in successfully" do
+  it "logs in successfully" do
     user = FactoryBot.create(:user, email: "adrian@example.com", password: "secret")
     user.confirm
 
