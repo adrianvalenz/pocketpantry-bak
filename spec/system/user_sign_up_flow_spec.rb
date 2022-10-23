@@ -25,4 +25,13 @@ RSpec.describe "Devise User", :type => :system do
 
     expect(page).to have_text(I18n.t("devise.failure.invalid", authentication_keys: "Email"))
   end
+
+  it "logs out" do
+    user = FactoryBot.create(:user, :email: "adrian@example.com", password: "secret")
+
+    visit root_path
+    click_link "sign-out-link"
+
+    # expect(page).to have_text(I18n.t("devise.x.x"))
+  end
 end

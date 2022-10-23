@@ -3,7 +3,8 @@ module.exports = {
     './app/views/**/*.html.erb',
     './app/helpers/**/*.rb',
     './app/assets/stylesheets/**/*.css',
-    './app/javascript/**/*.js'
+    './app/javascript/**/*.js',
+    './app/builders/**/*.rb'
   ],
   theme: {
     fontFamily: {
@@ -37,7 +38,7 @@ module.exports = {
           800: '#7A1A1B',
           900: '#561011',
         },
-        ocean: {
+        green: {
           50: '#F5FEFF',
           100: '#DFFAFB',
           200: '#C3F2F4',
