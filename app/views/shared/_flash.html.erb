@@ -1,5 +1,5 @@
 <div class="flashes">
   <% flash.each do |type, message| %>
-    <%= content_tag :div, message, class: "flash #{type} max-w-5xl mx-auto px-4 py-2" %>
+    <%= content_tag :div, message, class: "flash #{type} max-w-5xl mx-auto px-4 py-2 rounded-md bg-rose-100 text-rose-800 mt-2", data: { controller: "flash" } %>
   <% end %>
 </div>
