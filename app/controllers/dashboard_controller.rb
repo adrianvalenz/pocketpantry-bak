@@ -1,4 +1,6 @@
 class DashboardController < ApplicationController
-  def overview
+  layout "dashboard"
+
+  def show
   end
 end
