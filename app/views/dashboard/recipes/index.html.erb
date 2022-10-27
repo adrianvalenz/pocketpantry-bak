@@ -1,2 +1,11 @@
-<h1 class="text-stone-600">Your awesome recipes</h1>
+<h1 class="text-stone-600"><%= t("dashboard.recipes.views.index.title") %></h1>
 
+<div class="max-w-full bg-stone-200 rounded-md">
+  <% if current_user.recipes.any? %>
+    <% @recipes.each do |recipe| %>
+      <%= recipe.name %>
+    <% end %>
+  <% else %>
+    <%= t("dashboard.recipes.messages.no_recipes") %>
+  <% end %>
+</div>

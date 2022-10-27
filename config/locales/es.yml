@@ -2,4 +2,8 @@ es:
   hello: "Hola mundo!"
   dashboard:
     recipes:
-      index_title: "Tus recetas"
+      views:
+        index:
+          title: "Tus recetas"
+      messages:
+        no_recipes: "No tienes recetas. Escribe tu primera."
