@@ -6,7 +6,7 @@
 
 @layer base {
   body {
-    @apply font-sans text-base bg-warm-50 text-warm-900;
+    @apply font-sans text-base bg-stone-100 text-stone-600;
   }
   p {
     @apply text-base;
@@ -18,18 +18,18 @@
     @apply text-3xl font-display;
   }
   input {
-    @apply bg-warm-100 text-warm-900;
+    @apply bg-stone-100 text-stone-900;
   }
   input:-webkit-autofill,
   textarea:-webkit-autofill,
   select:-webkit-autofill {
-    -webkit-box-shadow: 0 0 0 1000px theme('colors.warm.100') inset !important;
+    -webkit-box-shadow: 0 0 0 1000px theme('colors.stone.100') inset !important;
     -webkit-text-fill-color: red !important;
   }
 }
 
 .session-dropdown a {
-  @apply flex items-center gap-2 w-full first-of-type:rounded-t-md last-of-type:rounded-b-md px-4 py-2.5 text-left text-sm hover:bg-gray-50 disabled:text-gray-500;
+  @apply flex items-center gap-2 w-full first-of-type:rounded-t-md last-of-type:rounded-b-md px-4 py-2.5 text-left text-sm hover:bg-stone-50 disabled:text-stone-500;
 }
 
 @keyframes fade-in-and-out {

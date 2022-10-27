@@ -1,12 +1,14 @@
 <% content_for :content do %>
-  <div class="max-w-5xl mx-auto px-4 py-8 grid grid-cols-5 gap-4">
-    <div class="col-span-1 sidebar border border-rose-500">
-      <%= render 'shared/dashboard_sidebar' %>
+    <div class="max-w-5xl mx-auto px-4 py-8 grid grid-cols-5 gap-8">
+      <div class="border border-rose-300 rounded-md bg-stone-50">
+        <nav class="col-span-1 sidebar">
+          <%= render 'dashboard/sidebar' %>
+        </nav>
+      </div>
+      <div class="col-span-4">
+        <%= yield %>
+      </div>
     </div>
-    <div class="col-span-4">
-      <%= yield %>
-    </div>
-  </div>
 <% end %>
 
 <%= render template: "layouts/application" %>

@@ -31,3 +31,6 @@
 
 en:
   hello: "Hello world"
+  dashboard:
+    recipes:
+      index_title: "Your awesome recipes"
