@@ -10,7 +10,7 @@ module.exports = {
     fontFamily: {
       "sans": ['proxima-nova', 'sans-serif'],
       "display": ['modern-love', 'sans-serif'],
-      "displaycaps": ['mordern-love-caps', 'sans-serif'],
+      "subheading": ['modern-love-caps', 'sans-serif'],
     },
     extend: {
       colors: {

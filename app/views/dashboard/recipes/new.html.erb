@@ -1,2 +1,16 @@
-<h1>Dashboard::Recipes#new</h1>
-<p>Find me in app/views/dashboard/recipes/new.html.erb</p>
+<div class="max-w-full bg-stone-100 rounded-md px-4 py-2">
+  <%= turbo_frame_tag "new-recipe" do %>
+    <h1>Write down a new recipe</h1>
+    <!-- form -->
+    <%= form_with model: [:dashboard, @recipe], builder: SourdoughFormBuilder do |form| %>
+      <div class="flex mb-4 items-center space-x-4">
+        <%= form.label :name %>
+        <%= form.text_field :name %>
+      </div>
+
+      <div>
+        <%= form.submit "Add to pantry" %>
+      </div>
+    <% end %>
+  <% end %>
+</div>

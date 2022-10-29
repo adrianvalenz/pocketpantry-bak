@@ -8,18 +8,23 @@
   body {
     @apply font-sans text-base bg-stone-100 text-stone-600;
   }
+
   p {
     @apply text-base;
   }
-  h2 {
-    @apply text-2xl;
-  }
+
   h1 {
-    @apply text-3xl font-display;
+    @apply text-4xl font-display leading-tight mb-4 text-cyan-500;
   }
+
+  h2 {
+    @apply text-3xl leading-tight mb-4 font-subheading text-cyan-500;
+  }
+
   input {
     @apply bg-stone-100 text-stone-900;
   }
+
   input:-webkit-autofill,
   textarea:-webkit-autofill,
   select:-webkit-autofill {
@@ -37,6 +42,7 @@
   100% {
     opacity: 0;
   }
+
   25%,
   75% {
     opacity: 1;

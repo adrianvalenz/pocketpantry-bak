@@ -37,5 +37,5 @@ en:
         index:
           title: "Your awesome recipes"
       messages:
-        no_recipes: "You have no recipes. Create your first one!"
+        no_recipes: "Umm...looks like you haven't written down any recipes!"
 

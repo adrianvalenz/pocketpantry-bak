@@ -22,3 +22,8 @@ Things you may want to cover:
 * Deployment instructions
 
 * ...
+
+### Illustration credits
+
+<a href="https://www.freepik.com/free-vector/miller-baker-icon-set_26765373.htm#query=oven&position=21&from_view=search&track=sph">Image by macrovector</a> on Freepik
+

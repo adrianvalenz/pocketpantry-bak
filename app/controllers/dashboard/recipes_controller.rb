@@ -1,4 +1,6 @@
 class Dashboard::RecipesController < DashboardController
+  before_action :set_recipe, only: %i[ show ]
+
   def index
     @recipes = current_user.recipes.all
   end
@@ -6,9 +8,28 @@ class Dashboard::RecipesController < DashboardController
   def show
   end
 
-  def edit
+  def new
+    @recipe = Recipe.new
   end
 
-  def new
+  def create
+    @recipe = current_user.recipes.build(recipe_params)
+
+    respond_to do |format|
+      if @recipe.save
+        format.html { redirect_to dashboard_recipes_path, notice: 'Recipe was created!' }
+      else
+        format.html { render :new, status: :unprocessable_entity }
+      end
+    end
+  end
+
+  private
+  def set_recipe
+    @recipe = Recipe.find(params[:id])
+  end
+
+  def recipe_params
+    params.require(:recipe).permit(:name)
   end
 end
