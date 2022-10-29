@@ -20,6 +20,6 @@ class SourdoughFormBuilder < ActionView::Helpers::FormBuilder
   end
   
   def submit(method, options={})
-    super(method, options.reverse_merge(class: "bg-rose-500 text-rose-50 py-2 px-4 rounded-md cursor-pointer hover:bg-rose-600"))
+    super(method, options.reverse_merge(class: "btn btn-submit"))
   end
 end

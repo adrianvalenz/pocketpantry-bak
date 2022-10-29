@@ -2,6 +2,7 @@ es:
   hello: "Hola mundo!"
   dashboard:
     recipes:
+      write_down_recipe: "Escribe una nueva receta."
       views:
         index:
           title: "Tus recetas"

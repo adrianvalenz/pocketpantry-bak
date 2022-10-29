@@ -34,14 +34,16 @@ RSpec.describe "User", :type => :system do
   it "creates new recipe" do
     visit dashboard_recipes_path
     click_link "new-recipe-link"
-
     fill_in "Name", with: "Chocolate Pizza"
     click_button "Add to pantry"
-
     expect(page).to have_content("Chocolate Pizza")
   end
 
-  xit "adds new recipe from dashboard/recipes index" do
+  it "adds new recipe from dashboard/recipes index" do
+    recipe = FactoryBot.create(:recipe, user: user)
+    visit dashboard_recipes_path
+    click_on("Add recipe")
+    expect(page).to have_content(I18n.t("dashboard.recipes.write_down_recipe"))
   end
 
   xit "updates recipe" do

@@ -33,6 +33,7 @@ en:
   hello: "Hello world"
   dashboard:
     recipes:
+      write_down_recipe: "Write down a new recipe"
       views:
         index:
           title: "Your awesome recipes"
