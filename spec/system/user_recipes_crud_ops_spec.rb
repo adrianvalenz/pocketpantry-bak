@@ -20,20 +20,19 @@ RSpec.describe "User", :type => :system do
 
   it "has no recipes" do
     user.recipes.destroy_all
-    visit dashboard_recipes_path
+    visit dashboard_path
     expect(page).to have_text(I18n.t("dashboard.recipes.messages.no_recipes"))
   end
 
   it "lists existing recipes" do
     recipe = FactoryBot.create(:recipe, user: user)
     visit dashboard_recipes_path
-    # expect(page).to have_text(I18n.t("dashboard.recipes.views.index.title"))
     expect(page).to have_text(recipe.name)
   end
 
   it "creates new recipe" do
     visit dashboard_recipes_path
-    click_link "new-recipe-link"
+    click_link "Add recipe"
     fill_in "Name", with: "Chocolate Pizza"
     click_button "Add to pantry"
     visit dashboard_recipes_path
