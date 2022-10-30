@@ -1,4 +1,5 @@
 class HomeController < ApplicationController
-  def show
+  def index
+    @recipes = current_user.recipes.all
   end
 end

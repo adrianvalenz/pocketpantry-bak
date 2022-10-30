@@ -1,7 +1,7 @@
 <div class="grid">
   <div class="mb-8">
     <%= turbo_frame_tag 'new-recipe' do %>
-      <h1 class="mb-8"><%= t("dashboard.recipes.views.index.title") %></h1>
+      <h1 class="mb-8"><%= t("dashboard.recipes.your_recipes") %></h1>
       <%= link_to "Add recipe", new_dashboard_recipe_path, class: 'btn btn-submit' %>
     <% end %>
   </div>

@@ -1,0 +1,19 @@
+<% if user_signed_in? %>
+  <%= render 'shared/user_welcome' %>
+<% else %>
+  <div class="max-w-5xl mx-auto px-4 py-8 grid grid-cols-3 gap-4">
+    <div class="col-span-3">
+      <h1 class="mb-8 md:text-5xl text-cyan-500"><%= t("home_hero") %></h1>
+    </div>
+
+    <div class="col-span-2">
+      <h2 class="mb-8"><%= t("home_tagline") %></h2>
+      <%= link_to "Sign up", new_user_registration_path, class: 'btn btn-submit' %>
+    </div>
+
+    <div class="col-span-1">
+      <%= image_tag "hero-image.svg" %>
+    </div>
+  </div>
+<% end %>
+

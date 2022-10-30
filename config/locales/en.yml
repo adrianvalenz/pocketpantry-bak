@@ -31,8 +31,11 @@
 
 en:
   hello: "Hello world"
+  home_hero: "All your favorite recipes, in your back pocket"
+  home_tagline: "Pocket Pantry is the a place to keep all your own recipes together"
   dashboard:
     recipes:
+      your_recipes: "Your awesome recipes"
       write_down_recipe: "Write down a new recipe"
       views:
         index:
