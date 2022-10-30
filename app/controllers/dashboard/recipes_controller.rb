@@ -2,7 +2,7 @@ class Dashboard::RecipesController < DashboardController
   before_action :set_recipe, only: %i[ show ]
 
   def index
-    @recipes = current_user.recipes.all
+    @recipes = current_user.recipes.all.reverse_order
   end
 
   def show
@@ -13,7 +13,7 @@ class Dashboard::RecipesController < DashboardController
   end
 
   def create
-    @recipes = current_user.recipes.all
+    @recipes = current_user.recipes.all.reverse_order
     @recipe = current_user.recipes.build(recipe_params)
 
     respond_to do |format|
