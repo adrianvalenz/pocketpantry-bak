@@ -2,17 +2,7 @@
   <div class="max-w-full bg-stone-50 rounded-md px-4 py-2">
     <div class="bg-stone-50">
       <h2><%= t("dashboard.recipes.write_down_recipe") %></h2>
-      <!-- form -->
-      <%= form_with model: [:dashboard, @recipe], builder: SourdoughFormBuilder, id: 'recipe-form' do |form| %>
-        <div class="flex mb-4 items-center">
-          <%= form.label :name, class: 'hidden' %>
-          <%= form.text_field :name, placeholder: "Name: i.e. Chocolate Pizza..." %>
-        </div>
-
-        <div>
-          <%= form.submit "Add to pantry" %>
-        </div>
-      <% end %>
+      <%= render partial: 'form', locals: { model: @recipe } %>
     </div>
   </div>
 <% end %>

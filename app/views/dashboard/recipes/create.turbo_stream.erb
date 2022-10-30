@@ -1,6 +1,6 @@
 <%= turbo_stream.update "recipe-list" do %>
   <% @recipes.each do |recipe| %>
-    <li class="bg-stone-50 first-of-type:rounded-t-md">
+    <li class="bg-stone-50 first-of-type:rounded-t-md last-of-type:rounded-b-md px-4 py-2 mb-2">
       <%= recipe.name %>
     </li>
   <% end %>

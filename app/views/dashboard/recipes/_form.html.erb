@@ -1,0 +1,11 @@
+<%= form_with model: [:dashboard, model], builder: SourdoughFormBuilder, id: 'recipe-form' do |form| %>
+  <div class="flex mb-4 items-center">
+    <%= form.label :name, class: 'hidden' %>
+    <%= form.text_field :name, placeholder: "i.e. Chocolate Pizza..." %>
+  </div>
+
+  <div>
+    <%= form.submit "Add to pantry" %>
+    <%= link_to "Nevermind", dashboard_recipes_path, class: 'btn border border-rose-500 text-rose-700 hover:bg-stone-100' %>
+  </div>
+<% end %>
