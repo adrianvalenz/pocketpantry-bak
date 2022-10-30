@@ -13,10 +13,12 @@ class Dashboard::RecipesController < DashboardController
   end
 
   def create
+    @recipes = current_user.recipes.all
     @recipe = current_user.recipes.build(recipe_params)
 
     respond_to do |format|
       if @recipe.save
+        format.turbo_stream
         format.html { redirect_to dashboard_recipes_path, notice: 'Recipe was created!' }
       else
         format.html { render :new, status: :unprocessable_entity }

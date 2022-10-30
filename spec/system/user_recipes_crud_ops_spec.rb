@@ -36,6 +36,7 @@ RSpec.describe "User", :type => :system do
     click_link "new-recipe-link"
     fill_in "Name", with: "Chocolate Pizza"
     click_button "Add to pantry"
+    visit dashboard_recipes_path
     expect(page).to have_content("Chocolate Pizza")
   end
 
