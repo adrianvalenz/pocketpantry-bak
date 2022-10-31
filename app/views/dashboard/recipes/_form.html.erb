@@ -11,7 +11,9 @@
 
   <fieldset class="flex flex-col space-y-2 mb-4">
     <%= form.label :instructions %>
-    <%= form.rich_text_area :instructions %>
+    <div class="trix-content-wrapper">
+      <%= form.rich_text_area :instructions, placeholder: "Describe the steps for your recipe here" %>
+    </div>
   </fieldset>
 
   <div class="flex items-center space-x-2 mt-4 justify-end">
