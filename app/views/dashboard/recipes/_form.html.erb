@@ -3,6 +3,10 @@
     <%= form.label :name, class: 'hidden' %>
     <%= form.text_field :name, placeholder: "i.e. Chocolate Pizza..." %>
   </fieldset>
+  <fieldset>
+    <%= form.label :main_image %>
+    <%= form.file_field :main_image %>
+  </fieldset>
 
   <div class="flex items-center space-x-2 mt-4">
     <%= form.submit submit %>

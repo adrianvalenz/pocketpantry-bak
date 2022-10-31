@@ -1,7 +1,11 @@
 <h1><%= @recipe.name %></h1>
 <p class="with-side mb-4 text-stone-500">With diced tomatoes, fresh romaine, and black pepper</p>
 
-<%= image_tag "food/salad.jpg", class: "rounded-lg mb-4" %>
+<% if @recipe.main_image.attached? %>
+  <%= image_tag @recipe.main_image, class: "rounded-lg mb-4" %>
+<% else %>
+  <%= image_tag "food/default.svg", class: "rounded-lg mb-4" %>
+<% end %>
 
 <div class="mb-8">
   <h2>Ingredients</h2>
