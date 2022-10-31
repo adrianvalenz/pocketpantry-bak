@@ -37,6 +37,7 @@ en:
     recipes:
       your_recipes: "Your awesome recipes"
       write_down_recipe: "Write down a new recipe"
+      update_recipe: "Update"
       views:
         index:
           title: "Your awesome recipes"

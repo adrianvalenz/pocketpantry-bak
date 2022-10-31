@@ -1,6 +1,6 @@
 <div class="max-w-5xl mx-auto px-4 py-8">
   <% if current_user.recipes.any? %>
-    <h1 class="mb-8 md:text-5xl text-cyan-500">All your favorite recipes, in your back pocket</h1>
+    <h1 class="mb-16 md:text-5xl text-cyan-500">All your favorite recipes, in your back pocket</h1>
     <%= render partial: "home/user_recipes", locals: { recipes: @recipes } %>
   <% else %>
     <div class="px-4 py-2 grid grid-cols-3 gap-8">

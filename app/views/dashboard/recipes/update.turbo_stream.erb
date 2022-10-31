@@ -1,0 +1,5 @@
+<%= turbo_stream.update "recipe-list" do %>
+  <%= render partial: 'dashboard/recipes/my_recipes', locals: { object: @recipes } %>
+<% end %>
+
+<%= render_flash_stream %>

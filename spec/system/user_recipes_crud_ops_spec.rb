@@ -52,7 +52,13 @@ RSpec.describe "User", :type => :system do
     expect(page).to have_content(I18n.t("dashboard.recipes.write_down_recipe"))
   end
 
-  xit "updates recipe" do
+  it "updates recipe" do
+    recipe = FactoryBot.create(:recipe, user: user, name: "Pizza", id: 2)
+    visit dashboard_recipes_path
+    click_link("update-recipe_2")
+    fill_in "Name", with: "Pizza Pizzaz"
+    click_button("Update")
+    expect(page).to have_content("Pizza Pizzaz")
   end
 
   it "deletes recipe" do
