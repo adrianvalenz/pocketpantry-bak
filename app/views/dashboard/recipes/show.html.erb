@@ -1,2 +1,24 @@
-<h1>Dashboard::Recipes#show</h1>
-<p>Find me in app/views/dashboard/recipes/show.html.erb</p>
+<h1><%= @recipe.name %></h1>
+<p class="with-side mb-4 text-stone-500">With diced tomatoes, fresh romaine, and black pepper</p>
+
+<%= image_tag "food/salad.jpg", class: "rounded-lg mb-4" %>
+
+<div class="mb-8">
+  <h2>Ingredients</h2>
+  <ul>
+    <li>Romaine lettuce - 20 calories</li>
+    <li>Tomatoes - 10 calories</li>
+    <li>Black peppper - 5 calories</li>
+  </ul>
+</div>
+
+<div class="mb-8">
+  <h2>Instructions</h2>
+
+  <p>
+    First you do this and then you do that. Then this goes here, wait cut that
+    first, then you pour it over and let it sit for 10 minutes...jk it's a salad start
+    eating it as soon as you grab a fork...if you want a fork, I don't use a fork, I'm not
+    a punk like that. :)
+  </p>
+</div>

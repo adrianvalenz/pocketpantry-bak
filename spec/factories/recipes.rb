@@ -1,6 +1,6 @@
 FactoryBot.define do
   factory :recipe do
-    name { "Double Cheeseburger" }
+    name { Faker::Food.dish }
     user { nil }
   end
 end

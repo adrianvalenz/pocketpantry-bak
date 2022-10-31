@@ -1,5 +1,5 @@
 class Dashboard::RecipesController < DashboardController
-  before_action :set_recipe, only: %i[ show ]
+  before_action :set_recipe, only: %i[ show destroy ]
 
   def index
     @recipes = current_user.recipes.all.reverse_order
@@ -20,15 +20,22 @@ class Dashboard::RecipesController < DashboardController
       if @recipe.save
         format.turbo_stream
         format.html { redirect_to dashboard_recipes_path, notice: 'Recipe was created!' }
+        flash.now[:notice] = "Recipe was created."
       else
         format.html { render :new, status: :unprocessable_entity }
       end
     end
   end
 
+  def destroy
+    @recipes = current_user.recipes.all.reverse_order
+    @recipe.destroy
+    flash.now[:alert] = "Recipe was deleted"
+  end
+
   private
   def set_recipe
-    @recipe = Recipe.find(params[:id])
+    @recipe = current_user.recipes.find(params[:id])
   end
 
   def recipe_params

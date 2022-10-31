@@ -2,4 +2,6 @@
   <%= render partial: 'dashboard/recipes/my_recipes', locals: { object: @recipes } %>
 <% end %>
 
+<%= turbo_stream.remove @recipe %>
+
 <%= render_flash_stream %>

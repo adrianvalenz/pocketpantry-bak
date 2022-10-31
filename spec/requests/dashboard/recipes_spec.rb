@@ -2,31 +2,22 @@ require 'rails_helper'
 
 RSpec.describe "Dashboard::Recipes", type: :request do
   describe "GET /index" do
-    it "returns http success" do
-      get "/dashboard/recipes/index"
-      expect(response).to have_http_status(:success)
+    context "when logged in" do
+      it "returns http success" do
+        @user = FactoryBot.create(:user)
+        login_as(@user)
+        get "/dashboard/recipes"
+        expect(response).to have_http_status(:success)
+      end
+    end
+
+    context "when logged out" do
+      it "redirects to login page" do
+        get "/dashboard/recipes"
+        expect(response).to have_http_status(:found)
+        follow_redirect!
+        expect(response).to have_http_status(:ok)
+      end
     end
   end
-
-  describe "GET /show" do
-    it "returns http success" do
-      get "/dashboard/recipes/show"
-      expect(response).to have_http_status(:success)
-    end
-  end
-
-  describe "GET /edit" do
-    it "returns http success" do
-      get "/dashboard/recipes/edit"
-      expect(response).to have_http_status(:success)
-    end
-  end
-
-  describe "GET /new" do
-    it "returns http success" do
-      get "/dashboard/recipes/new"
-      expect(response).to have_http_status(:success)
-    end
-  end
-
 end

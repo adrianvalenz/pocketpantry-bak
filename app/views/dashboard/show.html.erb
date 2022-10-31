@@ -1,5 +1,5 @@
 <div class="max-w-5xl mx-auto px-4">
   <h1>Welcome to your dashboard!</h1>
 
-  Your overview
+  You have <%= link_to "#{current_user.recipes.count} recipes", dashboard_recipes_path %> in your back pocket!
 </div>

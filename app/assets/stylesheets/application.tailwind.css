@@ -31,6 +31,10 @@
     -webkit-box-shadow: 0 0 0 1000px theme('colors.stone.100') inset !important;
     -webkit-text-fill-color: red !important;
   }
+
+  a {
+    @apply text-rose-500 font-bold;
+  }
 }
 
 @layer components {
@@ -44,7 +48,7 @@
 }
 
 .session-dropdown a {
-  @apply flex items-center gap-2 w-full first-of-type:rounded-t-md last-of-type:rounded-b-md px-4 py-2.5 text-left text-sm hover:bg-stone-50 disabled:text-stone-500;
+  @apply flex font-normal items-center gap-2 w-full first-of-type:rounded-t-md last-of-type:rounded-b-md px-4 py-2.5 text-left text-sm hover:bg-stone-50 disabled:text-stone-500;
 }
 
 @keyframes fade-in-and-out {

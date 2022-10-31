@@ -45,7 +45,7 @@ RSpec.describe "User", :type => :system do
     expect(page).to have_content("Chocolate Pizza")
   end
 
-  it "adds new recipe from dashboard/recipes index" do
+  it "adds new recipe from dashboard" do
     recipe = FactoryBot.create(:recipe, user: user)
     visit dashboard_recipes_path
     click_on("Add recipe")
@@ -55,6 +55,12 @@ RSpec.describe "User", :type => :system do
   xit "updates recipe" do
   end
 
-  xit "deletes recipe" do
+  it "deletes recipe" do
+    recipe = FactoryBot.create(:recipe, user: user, id: 3)
+    visit dashboard_recipes_path
+    accept_confirm do
+      click_link('destroy-recipe_3')
+    end
+    expect(page).to_not have_content(recipe.name)
   end
 end

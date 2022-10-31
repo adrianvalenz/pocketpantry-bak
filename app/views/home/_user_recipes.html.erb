@@ -1,3 +1,10 @@
-<% recipes.each do |recipe| %>
-  <%= recipe.name %>
+<div class="grid grid-cols-3 gap-4">
+<% current_user.recipes.each do |recipe| %>
+  <div id="<%= dom_id(recipe) %>">
+    <%= link_to dashboard_recipe_path(recipe) do %>
+      <%= image_tag "food/salad.jpg", class: "rounded-t-lg" %>
+      <p class="bg-stone-200 w-full px-2 py-2 rounded-b-lg text-center"><%= recipe.name %></p>
+    <% end %>
+  </div>
 <% end %>
+</div>
