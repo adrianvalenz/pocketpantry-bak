@@ -1,14 +1,20 @@
 <%= form_with model: [:dashboard, model], builder: SourdoughFormBuilder, id: 'recipe-form' do |form| %>
-  <fieldset class="flex items-center">
-    <%= form.label :name, class: 'hidden' %>
+  <fieldset class="flex flex-col space-y-2 mb-4">
+    <%= form.label "Name of your recipe" %>
     <%= form.text_field :name, placeholder: "i.e. Chocolate Pizza..." %>
   </fieldset>
-  <fieldset>
+
+  <fieldset class="flex flex-col space-y-2 mb-4">
     <%= form.label :main_image %>
     <%= form.file_field :main_image %>
   </fieldset>
 
-  <div class="flex items-center space-x-2 mt-4">
+  <fieldset class="flex flex-col space-y-2 mb-4">
+    <%= form.label :instructions %>
+    <%= form.rich_text_area :instructions %>
+  </fieldset>
+
+  <div class="flex items-center space-x-2 mt-4 justify-end">
     <%= form.submit submit %>
     <%= link_to dashboard_recipes_path, class: 'mx-2 text-rose-400 hover:text-rose-700' do %>
       <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">

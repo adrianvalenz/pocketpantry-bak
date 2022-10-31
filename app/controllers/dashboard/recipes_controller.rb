@@ -53,6 +53,6 @@ class Dashboard::RecipesController < DashboardController
   end
 
   def recipe_params
-    params.require(:recipe).permit(:name, :main_image)
+    params.require(:recipe).permit(:name, :main_image, :instructions)
   end
 end
