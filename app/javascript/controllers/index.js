@@ -9,3 +9,6 @@ application.register("flash", FlashController)
 
 import HelloController from "./hello_controller"
 application.register("hello", HelloController)
+
+import TrixToolbarRecipeController from "./trix_toolbar_recipe_controller"
+application.register("trix-toolbar-recipe", TrixToolbarRecipeController)

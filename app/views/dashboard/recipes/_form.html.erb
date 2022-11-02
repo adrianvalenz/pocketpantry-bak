@@ -12,7 +12,7 @@
   <fieldset class="flex flex-col space-y-2 mb-4">
     <%= form.label :instructions %>
     <div class="trix-content-wrapper">
-      <%= form.rich_text_area :instructions, placeholder: "Describe the steps for your recipe here" %>
+      <%= form.rich_text_area :instructions, placeholder: "Describe the steps for your recipe here", data: { controller: 'trix-toolbar-recipe' } %>
     </div>
   </fieldset>
 

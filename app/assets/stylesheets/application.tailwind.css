@@ -64,9 +64,32 @@
 }
 
 /* Tailwind-Trix overrides */
+.trix-button--icon-heading-1 {
+  display: none;
+}
+
+.trix-button {
+  @apply border border-cyan-500 rounded-sm px-1 mb-1;
+}
+
+trix-editor {
+  @apply border border-rose-500 rounded-lg;
+}
+
+.trix-active {
+  @apply bg-stone-200;
+}
 
 .trix-button-row {
   @apply py-2 px-4 border border-rose-500 rounded-md mb-4;
+}
+
+trix-toolbar {
+  @apply whitespace-normal;
+}
+
+.trix-content {
+  @apply py-2;
 }
 
 .trix-content .attachment-gallery > action-text-attachment,

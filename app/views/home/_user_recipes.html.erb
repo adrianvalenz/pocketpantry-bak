@@ -2,7 +2,11 @@
 <% current_user.recipes.each do |recipe| %>
   <div id="<%= dom_id(recipe) %>">
     <%= link_to dashboard_recipe_path(recipe) do %>
-      <%= image_tag "food/salad.jpg", class: "rounded-t-lg" %>
+      <% if recipe.main_image.attached? %>
+        <%= image_tag recipe.main_image, class: "rounded-t-lg" %>
+      <% else %>
+        <%= image_tag "food/salad.jpg", class: "rounded-t-lg" %>
+      <% end %>
       <p class="bg-stone-200 w-full px-2 py-2 rounded-b-lg text-center"><%= recipe.name %></p>
     <% end %>
   </div>
